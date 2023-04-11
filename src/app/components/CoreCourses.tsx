@@ -1,47 +1,30 @@
-import {
-  Box,
-  Heading,
-  Container,
-  Stack,
-  Flex,
-  Text,
-  VStack
-} from '@chakra-ui/react';
-import CourseCard from "daoRoot/components/CourseCard";
 import React from "react";
-import {coreCoursesCards} from "daoRoot/assets/data/data";
+import {coreCoursesCards} from "panaverseRoot/app/assets/data/data";
+import CourseCard from "panaverseRoot/app/components/CourseCard";
 
 export default function CoreCourses() {
   return (
-    <Container id={'coreCourses'} maxW={'calc(100vw)'} minH={{md: 'calc(100vh)'}}>
-      <Stack
-        textAlign={'center'}
-        spacing={{base: 8}}
-        pt={'20'}
-      >
-        <Heading
-          fontWeight={600}
-          fontSize={{base: '2xl', md: '4xl'}}>
-          <Text as={'span'} color={'panaverseRed'}>
+    <div className={'container max-w-[calc(100vw)] md:min-h-[calc(100vh)]'} id={'coreCourses'}>
+      <div className={'flex flex-col text-center gap-8 pt-20'}>
+        <label className={'font-semibold text-2xl md:text-4xl'}>
+          <span className={'text-panaverseRed'} >
             Core&nbsp;
-          </Text>
+          </span>
           Courses
-        </Heading>
+        </label>
         {/*Courses*/}
-        <Flex direction={'row'} flexWrap={'wrap'} justifyContent={'center'}>
+        <div className={'flex flex-row flex-wrap justify-center'}>
           {
             coreCoursesCards.map((course, index) => {
               return (
-                // <CourseCard key={index} title={course.title} image={course.image} description={course.description}
-                //             linkTo={course.linkTo} isCore={course.isCore}/>
                 <CourseCard key={index} {...course}/>
               )
             })
           }
 
-        </Flex>
-      </Stack>
-    </Container>
+        </div>
+      </div>
+    </div>
   );
 }
 

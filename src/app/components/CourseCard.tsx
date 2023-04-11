@@ -1,77 +1,42 @@
-import {
-  chakra,
-  Box,
-  Stack,
-  Text,
-  Container,
-  Button,
-  ButtonProps,
-  useColorModeValue, Heading, Collapse, Flex, Badge
-} from '@chakra-ui/react';
-import React, {PropsWithChildren, useState} from 'react';
-import {CourseCardType} from "daoRoot/assets/types/types";
 import Link from "next/link";
 import Image from "next/image";
+import {CourseCardType} from "panaverseRoot/app/assets/types/types";
 
 
 const CourseCard = (props: CourseCardType) => {
-  const [show, setShow] = useState(false)
 
-  const handleToggle = () => setShow(!show)
   return (
-    <Container py={{base: 5, md: 5}} maxW={props.isCore ? {base: 'md', md: 'md'} : {base: 'sm', md: 'xs'}}>
-      <Box
-        cursor={'pointer'}
-        borderWidth="1px"
-        _hover={{shadow: 'lg', scale: '75', borderColor: 'gray.300'}}
-        rounded="md"
-        overflow="hidden"
-        bg={useColorModeValue('white', 'gray.800')}
-      >
-        <Image src={props.image} alt={''}
+    <div className={`container py-5 px-5 ${props.isCore ? 'max-w-md' : 'max-w-sm md:max-w-xs'}`}>
+      <div className={`flex flex-col justify-between cursor-pointer border rounded-md overflow-hidden bg-white hover:shadow-lg hover:border-gray-300 h-[100%]`}>
+        <Image src={props.image} alt={''} className={'min-h-[55%]'}
           width="500"
           height="500"
         />
-        <Box p={{base: 3, sm: 5}}>
-          <Box mb={6}>
-            <Flex style={{
-              minHeight: 90
-            }} alignItems={'center'} direction={'row'}>
-              <Heading
-                as={'h3'}
-                fontSize={{base: 'xl', sm: '2xl'}}
-                fontWeight="bold"
-                lineHeight="1.2"
-                mb={2}
-                noOfLines={3}
-              >
+        <div className={`p-3 sm:p-5 flex flex-col justify-between min-h-[43%]`}>
+          <div className={`mb-6`}>
+            <div className={`flex items-center`} style={{minHeight: 90}}>
+              <h3 className={`text-xl sm:text-2xl font-semibold mb-2 line-clamp-3`}>
                 {props.title}
-              </Heading>
-            </Flex>
-            <Box fontSize={{base: 'lg'}} textAlign={'justify'} cursor={'pointer'}>
-              <Collapse startingHeight={110} in={show} onClick={handleToggle}>
+              </h3>
+            </div>
+            <div className={`text-lg text-justify cursor-pointer font-light`}>
+              {/*<Collapse startingHeight={110} in={show} onClick={handleToggle}>*/}
+              {/*</Collapse>*/}
+                <p className={`line-clamp-3`}>
                 {props.description}
-              </Collapse>
-            </Box>
-          </Box>
-          <Stack
-            justify="flex-end"
-            direction={{base: 'column', sm: 'row'}}
-            spacing={{base: 2, sm: 0}}
-          >
+                </p>
+            </div>
+          </div>
+          <div className={`flex flex-col sm:flex-row justify-end gap-2 sm:gap-0`}>
             <Link href={`${props.linkTo}`}>
-              <Button textTransform="uppercase" lineHeight="inherit" rounded="md" bg={'white'} borderWidth={1} w={150}
-                      fontWeight={400}
-                      _hover={{bg: 'transparent', borderColor: 'panaverseRed', fontWeight: 700}}
-              >
+              <button className={`px-6 py-2 uppercase rounded-md bg-white border w-[150] font-normal hover:bg-transparent hover:border-panaverseRed hover:font-bold`}>
                 Learn More
-              </Button>
+              </button>
             </Link>
-
-          </Stack>
-        </Box>
-      </Box>
-    </Container>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

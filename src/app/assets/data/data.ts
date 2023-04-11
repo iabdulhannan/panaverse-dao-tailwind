@@ -1,4 +1,4 @@
-import {CourseCardType, CourseQuarter, DropdownData, ProgramDetailType} from "daoRoot/assets/types/types";
+import {CourseCardType, CourseQuarter, DropdownData, ProgramDetailType} from "panaverseRoot/app/assets/types/types";
 
 export const dropdownData: DropdownData[] = [
   {
@@ -7,17 +7,17 @@ export const dropdownData: DropdownData[] = [
       {
         courseName: 'Object-Oriented Programming using TypeScript',
         subtitle: 'Quarter I',
-        linkTo: '/courseDetails/1#1',
+        linkTo: '/course/1#1',
       },
       {
         courseName: 'Developing Planet-Scale Web 2.0 Serverless Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform',
         subtitle: 'Quarter II',
-        linkTo: '/courseDetails/1#2',
+        linkTo: '/course/1#2',
       },
       {
         courseName: 'Dollar Making Bootcamp - Full-Stack Template and API Product Development',
         subtitle: 'Quarter III',
-        linkTo: '/courseDetails/1#3',
+        linkTo: '/course/1#3',
       }],
   },
   {
@@ -26,32 +26,32 @@ export const dropdownData: DropdownData[] = [
       {
         courseName: 'Ambient Computing and IoT Specialization',
         subtitle: 'Quarter IV & V',
-        linkTo: '/courseDetails/1',
+        linkTo: '/course/1',
         id: 1,
       }, {
         courseName: 'Artificial Intelligence (AI) and Deep Learning Specialization',
         subtitle: 'Quarter IV & V',
-        linkTo: '/courseDetails/2',
+        linkTo: '/course/2',
         id: 2,
       }, {
         courseName: 'Cloud-Native Computing Specialization',
         subtitle: 'Quarter IV & V',
-        linkTo: '/courseDetails/3',
+        linkTo: '/course/3',
         id: 3,
       }, {
         courseName: 'Genomics and Bioinformatics Specialization',
         subtitle: 'Quarter IV & V',
-        linkTo: '/courseDetails/4',
+        linkTo: '/course/4',
         id: 4,
       }, {
         courseName: 'Network Programmability and Automation Specialization',
         subtitle: 'Quarter IV & V',
-        linkTo: '/courseDetails/5',
+        linkTo: '/course/5',
         id: 5,
       }, {
         courseName: 'Web 3.0 (Blockchain) and Metaverse Specialization',
         subtitle: 'Quarter IV & V',
-        linkTo: '/courseDetails/6',
+        linkTo: '/course/6',
         id: 6,
       },
     ],
@@ -67,7 +67,7 @@ export const coreCoursesCards: CourseCardType[] = [
     image: TSLogo,
     title: 'Object-Oriented Programming using TypeScript',
     description: 'We will start the program by learning the fundamentals of Object-Oriented programming using JavaScript and TypeScript. We will also understand the latest Web trends i.e. Web 3.0 and Metaverse concepts and try to understand their working from the perspective of the users.',
-    linkTo: '/courseDetails/1#1',
+    linkTo: '/course/1#1',
     isCore: true,
     quarter: "I"
   },
@@ -76,7 +76,7 @@ export const coreCoursesCards: CourseCardType[] = [
     image: LambdaLogo,
     title: 'Developing Planet-Scale Web 2.0 Serverless Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform',
     description: 'The objective of this course is to teach participants to develop customer-facing planet-scale Websites, Full-Stack Apps and templates, Dashboards, and Muti-Cloud Serverless APIs.The technologies covered in this course will include Next.js 13, Figma, Tailwind CSS, Chakra UI, tRPC, QraphQL, Prisma, Cockroachdb Serverless (PostgreSQL Compatible), AWS Serverless Technologies, and Cloud Development Kit for Terraform (CDKTF).',
-    linkTo: '/courseDetails/1#2',
+    linkTo: '/course/1#2',
     isCore: true,
     quarter: "II"
   }, {
@@ -84,7 +84,7 @@ export const coreCoursesCards: CourseCardType[] = [
     image: DollarLogo,
     title: 'Dollar Making Bootcamp - Full-Stack Template and API Product Development',
     description: 'Develop Web 3.0 Templates and GraphQL APIs to sell and earn Dollars',
-    linkTo: '/courseDetails/1#3',
+    linkTo: '/course/1#3',
     isCore: true,
     quarter: "III"
   },
@@ -695,40 +695,40 @@ export const specializedTracks = [
     id: 1,
     title: 'Ambient Computing and IoT Specialization',
     description: 'The Ambient Computing and IoT Specialization focuses on building Smart Homes, Offices, Factories, and Cities using Voice computing, Matter Protocol, and Embedded Devices',
-    linkTo: '/courseDetails/1',
+    linkTo: '/course/1',
     // imageURL: '/images/png-transparent-internet-of-things-narrowband-iot-radio-frequency-identification-telecommunication-verizon-text-logo-mobile-payment.png'
     imageURL: '/images/iot.svg'
   }, {
     id: 2,
     title: 'Artificial Intelligence (AI) and Deep Learning Specialization',
     description: 'The AI and Deep Learning specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models',
-    linkTo: '/courseDetails/2',
+    linkTo: '/course/2',
     imageURL: '/images/artificial-intelligence 1.png'
   }, {
     id: 3,
     title: 'Cloud-Native Computing Specialization',
     description: 'The Cloud-Native Computing Specialization focuses on Containers, Kubernetes, and CDK for Kubernetes',
-    linkTo: '/courseDetails/3',
+    linkTo: '/course/3',
     imageURL: '/images/cloudComputing.png'
   }, {
     id: 4,
     title: 'Genomics and Bioinformatics Specialization',
     description: 'Genomics is the study of the total genetic makeup of individual organisms, and how this genetic information is structured, functions, and has evolved; bioinformatics encompasses a diverse range of analytical methods and tools applied to genomic data. This Specialization focuses on performing complex bioinformatics analysis using the most essential Python libraries and applications',
-    linkTo: '/courseDetails/4',
+    linkTo: '/course/4',
     // imageURL: '/images/bioInformatics.webp'
     imageURL: '/images/bioInformatics.svg'
   }, {
     id: 5,
     title: 'Network Programmability and Automation Specialization',
     description: 'More than ever, network engineers are finding it challenging to complete their duties entirely manually. Network automation is now crucial due to new protocols, technologies, delivery models, and the requirement for enterprises to become more adaptable and agile. This course teaches network engineers how to automate systems with code using a variety of technologies and tools, including Linux, Python, APIs, and Git',
-    linkTo: '/courseDetails/5',
+    linkTo: '/course/5',
     // imageURL: '/images/half-man-wearing-vr-headset-portrait-human-user-social-media-avatar-in-metaverse-world-free-png.webp'
     imageURL: '/images/networkProgramming.svg'
   }, {
     id: 6,
     title: 'Web 3.0 (Blockchain) and Metaverse Specialization',
     description: 'This Web 3.0 and Metaverse specialization focuses on developing full-stack Web 3.0 and Metaverse experiences for the next generation of the internet by specializing in building worlds that merge the best of cutting-edge decentralized distributed blockchains with 3D metaverse client experiences',
-    linkTo: '/courseDetails/6',
+    linkTo: '/course/6',
     imageURL: '/images/half-man-wearing-vr-headset-portrait-human-user-social-media-avatar-in-metaverse-world-free-png.webp'
   },
 ]

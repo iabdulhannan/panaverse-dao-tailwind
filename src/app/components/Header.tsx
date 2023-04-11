@@ -22,9 +22,10 @@ export default function Header() {
 
   return (
     <>
-      <header className={'bg-white px-4 fixed w-full z-50 top-0'}
+      <header className={'bg-white px-5 fixed w-full z-50 top-0'}
               style={{boxShadow: '0 4px 6px rgba(160, 174, 192, 0.6)'}}>
-        <div className={'container p-0 max-w-[calc(95vw)]'}>
+        <div className={'container p-0 max-w-[calc(95vw)] mx-auto px-5'}>
+        {/*<div className={'container p-0 min-w-full'}>*/}
           <div className={'flex h-16 items-center justify-between mx-auto'}>
             <div className={'flex items-center justify-between min-w-full'}>
               <button onClick={() => setIsOpen(!isOpen)} className={'bg-transparent block md:hidden text-md ml-3'}
