@@ -1,71 +1,41 @@
-import {
-  Box,
-  Heading,
-  Container,
-  Text,
-  Button,
-  Stack,
-  Center,
-} from '@chakra-ui/react';
 import Link from "next/link";
+import {Center} from "panaverseRoot/app/components/Center";
 
 export default function Hero() {
   return (
-    <>
-      <Container position={'relative'} maxW={'100%'} h={'calc(100vh)'} justifyContent={'center'}
-                 alignItems={"center"}
-                 backgroundPosition="center"
-                 backgroundRepeat="no-repeat"
-                 backgroundSize="contain"
-                 backgroundImage={{md: `url(/heroBG.png)`}}
-      >
-        <Center h={'full'}>
+      <div className="relative h-screen flex justify-center items-center"
+           style={{
+             backgroundImage: "url(/heroBG.png)", backgroundPosition: "center",
+             backgroundRepeat: "no-repeat", backgroundSize: "contain"
+           }}>
+        <div className="max-w-full">
+          <Center className={'h-full'}>
+            <div className="max-w-3xl md:max-w-65% lg:max-w-3xl mx-auto text-center py-20 md:py-36 gap-y-16 flex flex-col">
 
-          <Stack
-            maxW={{base: '3xl', md: '65%', lg: '3xl'}}
-            as={Box}
-            textAlign={'center'}
-            spacing={{base: 8, md: 14}}
-            py={{base: 20, md: 36}}
-          >
-            <Heading
-              fontWeight={600}
-              fontSize={{base: '3xl', sm: '4xl', md: '5xl', lg: '6xl'}}
-              lineHeight={'110%'}>
-              <Text as={'span'} color={'panaverseRed'}>
-                Earn&nbsp;
-              </Text>
-              while you Learn <br/>
-            </Heading>
-            <Text color={'gray.500'} textAlign={{base: 'center'}}>
-              Learn how to make money and boost exports in within a short time span of 6 months from the start of
-              program,
-              resembling a cross between a corporate venture and an educational project.
-            </Text>
-            <Stack
-              direction={'column'}
-              spacing={3}
-              align={'center'}
-              alignSelf={'center'}
-              position={'relative'}>
-              <Link href={'#coreCourses'}>
-                <Button
-                  colorScheme={'green'}
-                  bg={'gray.500'}
-                  rounded={'full'}
-                  px={6}
-                  _hover={{
-                    bg: 'panaverseRed',
-                  }}>
-                  Explore
-                </Button>
-              </Link>
-
-            </Stack>
-          </Stack>
-        </Center>
-      </Container>
-    </>
+              <h1 className={`font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-110`}>
+                <span className={'text-panaverseRed'}>
+                  Earn&nbsp;
+                </span>
+                while you Learn <br/>
+              </h1>
+              <p className={'text-gray-500 text-center text-xl font-light'}>
+                Learn how to make money and boost exports in within a short time span of 6 months from the start of
+                program,
+                resembling a cross between a corporate venture and an educational project.
+              </p>
+              <div className="flex flex-col items-center justify-center w-full">
+                <div className="w-full">
+                  <Link href={'#coreCourses'}>
+                    <button className={'bg-gray-450 rounded-full px-6 py-2 text-white hover:bg-panaverseRed'}>
+                      Explore
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Center>
+        </div>
+      </div>
   );
 }
 

@@ -20,7 +20,7 @@
       }
     ],
     "paths": {
-      "panaverseRoot/*": ["./src/*"]
+      "panaverseRoot/*": ["./src/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

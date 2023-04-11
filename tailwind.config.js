@@ -14,6 +14,7 @@ module.exports = {
       },
       colors: {
         panaverseRed: '#D3102D',
+        'gray-450': '#718096',
       }
     },
   },
