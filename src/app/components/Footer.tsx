@@ -1,57 +1,32 @@
-import {
-  Box,
-  Stack,
-  HStack,
-  VStack,
-  Link,
-  Divider,
-  Text,
-  Button,
-  IconButton,
-  LinkProps, Heading, Flex, Center
-} from '@chakra-ui/react';
-// Here we have used react-icons package for the icons
-import {FaFacebook, FaGithub, FaTwitter, FaYoutube} from 'react-icons/fa';
-import {BsDiscord} from 'react-icons/bs';
 import LOGO from 'panaverseRoot/app/assets/images/panaverseDaoLogoTransparent.png'
 import Image from "next/image";
+import {Center} from "panaverseRoot/app/components/Center";
+import Divider from "panaverseRoot/app/components/Divider";
+import Link from "next/link";
+import {socialLinks} from "panaverseRoot/app/assets/data/data";
 
 export const Footer = () => {
   return (
-    <Box px={5} py={{base: 5, md: 8}} maxW={{base: "calc(100vw)", md: 'calc(95vw)'}} marginInline="auto">
-      <Flex
-        justifyContent="space-between"
-        direction={{base: 'column', md: 'row'}}
-        alignItems={'center'}
-      >
-        <Flex direction={{base: 'column'}}
-              justifyContent={{base: 'center', md: 'center'}}
-              alignItems={{base: 'center', md: 'flex-start'}}>
+    <div className={`px-5 py-5 md:py-8 max-w-[100vw] md:max-w-[95vw] ms-auto me-auto `}>
+      <div className={`flex justify-between flex-col md:flex-row items-center`}>
+        <div className={`flex flex-col justify-center items-start md:items-center`}>
           <Center>
             {/*<Link href="https://www.panaverse.co/" isExternal>*/}
             <Image src={LOGO} alt={'LOGO'} width={300}/>
             {/*</Link>*/}
           </Center>
-          <Heading
-            fontWeight={600}
-            pl={{base: 0, md: '16'}}
-            fontSize={{base: 'xl', sm: '2xl', md: '2xl'}}
-            lineHeight={'110%'}>
-            <Text as={'span'} color={'panaverseRed'}>
+          <h1 className={`font-semibold md:pl-16 text-xl sm:text-2xl leading-10`}>
+            <span className={`text-panaverseRed`}>
               Earn&nbsp;
-            </Text>
+            </span>
             while you Learn <br/>
-          </Heading>
-        </Flex>
-        <Box maxW={{md: 'calc(50vw)'}} mt={{base: 5, md: 0}}>
-          <Heading
-            as={'h5'}
-            fontSize={{base: 'md'}}
-            color={'gray.600'}
-          >
+          </h1>
+        </div>
+        <div className={`md:max-w-[50vw] mt-5 md:mt-0`}>
+          <h5 className={`text-md text-gray-600 font-semibold`}>
             Program
-          </Heading>
-          <Text color={'gray.500'} textAlign={'justify'} as={'p'}>
+          </h5>
+          <p className={`text-gray-450 text-justify font-light`}>
             This curriculum is intended for beginners who want to learn software development from the ground up. The
             first three quarters are shared by all specialties and are dedicated to studying Object-Oriented Programming
             and cutting-edge Full-Stack Web 2.0 development. It is going to be a fifteen-month-long hybrid program that
@@ -59,70 +34,49 @@ export const Footer = () => {
             will be on hands-on learning by educating students to produce projects. To accommodate everyone, courses
             will be held primarily on weekends or after 6:00 p.m. (Pakistan Time) on weekdays. It employs a hybrid
             teaching format, with core onsite classes complemented by online Zoom laboratories and recorded videos.
-          </Text>
-        </Box>
+          </p>
+        </div>
 
-      </Flex>
+      </div>
 
-      <Divider my={4}/>
+      <Divider className={'my-4'}/>
 
-      <Stack direction={{base: 'column', md: 'row'}} spacing={5} justifyContent="space-between">
-        <Text fontSize="md" alignSelf={'center'}>
+      <div className={`flex flex-col md:flex-row gap-5 justify-between`}>
+        <h2 className={`text-md self-center font-light`}>
           Developed by{' '}
-          <Link
-            href="https://github.com/iabdulhannan"
-            textDecoration="underline"
-            _hover={{textDecoration: 'underline'}}
-            isExternal
-          >
+          <Link target={'_blank'} className={'underline'} href="https://github.com/iabdulhannan">
             Abdul Hannan
           </Link>
-        </Text>
-        <Stack spacing={2} direction={{md: 'row'}} display={{base: 'none', md: 'flex'}}>
-          <Button leftIcon={<FaFacebook/>} as={Link} href="https://www.facebook.com/groups/panaverse " isExternal
-                  rounded="md" bg={'#2a81f2'} color={'#ffffff'}>
-            Facebook
-          </Button>
-          <Button leftIcon={<FaGithub/>} as={Link} href="https://github.com/panaverse" isExternal rounded="md"
-                  colorScheme="gray">
-            Github
-          </Button>
-          <Button leftIcon={<FaTwitter/>} as={Link} href="https://twitter.com/Panaverse_edu" isExternal rounded="md"
-                  bg={'#1d9bf0'} color={'#ffffff'}>
-            Twitter
-          </Button>
-          <Button leftIcon={<FaYoutube/>} as={Link} href="https://github.com/panaverse" isExternal rounded="md"
-                  bg={'#cc0000'} color={'#ffffff'}>
-            Youtube
-          </Button>
-        </Stack>
+        </h2>
+        <div className={`hidden md:flex gap-x-2`}>
+          {
+            socialLinks.map((item, index) => {
+              return (
+                <Link target={'_blank'} key={index} href={item.href} className={`${item.className} py-2 px-4 flex items-center gap-x-2 rounded-md`}>
+                  <item.leftIcon/>
+                  <label>
+                    {item.title}
+                  </label>
+                </Link>
+              )
+            })
+          }
+        </div>
 
-        <Box display={{base: "flex", md: 'none'}} mt={"10"} justifyContent={'center'}>
-          <HStack spacing={4}>
-            <IconButton size="md" icon={<FaFacebook/>} as={Link} href="https://www.facebook.com/groups/panaverse "
-                        isExternal aria-label="Open Facebook"
-                        rounded="full" bg={'#2a81f2'} color={'#ffffff'}>
-              Facebook
-            </IconButton>
-            <IconButton size="md" icon={<FaGithub/>} as={Link} href="https://github.com/panaverse" isExternal
-                        rounded="full" aria-label="Open Github"
-                        colorScheme="gray">
-              Github
-            </IconButton>
-
-            <IconButton size="md" icon={<FaTwitter/>} as={Link} href="https://twitter.com/Panaverse_edu" isExternal
-                        rounded="full" aria-label="Open Twitter"
-                        bg={'#1d9bf0'} color={'#ffffff'}>
-              Twitter
-            </IconButton>
-            <IconButton size="md" icon={<FaYoutube/>} as={Link} href="https://www.youtube.com/@panaverse/streams"
-                        isExternal rounded="full" aria-label="Open YouTube"
-                        bg={'#cc0000'} color={'#ffffff'}>
-              Youtube
-            </IconButton>
-          </HStack>
-        </Box>
-      </Stack>
-    </Box>
+        <div className={`flex md:hidden mt-1 justify-center`}>
+          <div className={`flex gap-x-4`}>
+            {
+              socialLinks.map((item, index) => {
+                return (
+                  <Link target={'_blank'} key={index} href={item.href} className={`${item.className} p-3 flex items-center rounded-full`}>
+                    <item.leftIcon/>
+                  </Link>
+                )
+              })
+            }
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };

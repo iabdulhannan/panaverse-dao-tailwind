@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Divider(props) {
+function Divider({className}: {className?: string}) {
   return (
-    <div className={'bg-gray-200 w-full m-1 h-px'}>
+    <div className={`${className} bg-gray-200 w-full m-1 h-px`}>
     </div>
   );
 }

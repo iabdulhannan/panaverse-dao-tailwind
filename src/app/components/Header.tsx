@@ -49,7 +49,7 @@ export default function Header() {
                 }
               </div>
 
-              <Link href={GITHUB_REPO_LINK}>
+              <Link target={'_blank'} href={GITHUB_REPO_LINK}>
                 <button className={'rounded-full cursor-pointer p-2 hover:bg-gray-200 text-xl md:text-3xl'}>
                   <FaGithub color={'#000000'}/>
                 </button>

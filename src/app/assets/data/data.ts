@@ -60,6 +60,7 @@ export const dropdownData: DropdownData[] = [
 import TSLogo from '../images/Typescript-Logo-Small.png'
 import LambdaLogo from '../images/awslambda.webp'
 import DollarLogo from '../images/dollarLog.jpg'
+import {FaFacebook, FaGithub, FaTwitter, FaYoutube} from "react-icons/fa";
 
 export const coreCoursesCards: CourseCardType[] = [
   {
@@ -689,7 +690,6 @@ export const programDetail: ProgramDetailType[] = [
   },
 ]
 
-
 export const specializedTracks = [
   {
     id: 1,
@@ -717,14 +717,16 @@ export const specializedTracks = [
     linkTo: '/course/4',
     // imageURL: '/images/bioInformatics.webp'
     imageURL: '/images/bioInformatics.svg'
-  }, {
+  },
+  {
     id: 5,
     title: 'Network Programmability and Automation Specialization',
     description: 'More than ever, network engineers are finding it challenging to complete their duties entirely manually. Network automation is now crucial due to new protocols, technologies, delivery models, and the requirement for enterprises to become more adaptable and agile. This course teaches network engineers how to automate systems with code using a variety of technologies and tools, including Linux, Python, APIs, and Git',
     linkTo: '/course/5',
     // imageURL: '/images/half-man-wearing-vr-headset-portrait-human-user-social-media-avatar-in-metaverse-world-free-png.webp'
     imageURL: '/images/networkProgramming.svg'
-  }, {
+  },
+  {
     id: 6,
     title: 'Web 3.0 (Blockchain) and Metaverse Specialization',
     description: 'This Web 3.0 and Metaverse specialization focuses on developing full-stack Web 3.0 and Metaverse experiences for the next generation of the internet by specializing in building worlds that merge the best of cutting-edge decentralized distributed blockchains with 3D metaverse client experiences',
@@ -733,4 +735,30 @@ export const specializedTracks = [
   },
 ]
 
+export const socialLinks = [
+  {
+    leftIcon: FaFacebook,
+    href: 'https://www.facebook.com/groups/panaverse',
+    className: `bg-[#2a81f2] text-white`,
+    title: 'Facebook'
+  },
+  {
+    leftIcon: FaGithub,
+    href: 'https://github.com/panaverse',
+    className: `bg-[#EDF2F6] text-black`,
+    title: 'Github'
+  },
+  {
+    leftIcon: FaTwitter,
+    href: 'https://twitter.com/Panaverse_edu',
+    className: `bg-[#1d9bf0] text-white`,
+    title: 'Twitter'
+  },
+  {
+    leftIcon: FaYoutube,
+    href: 'https://github.com/panaverse',
+    className: `bg-[#cc0000] text-white`,
+    title: 'Youtube'
+  },
+]
 

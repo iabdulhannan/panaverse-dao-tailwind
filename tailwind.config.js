@@ -15,6 +15,9 @@ module.exports = {
       colors: {
         panaverseRed: '#D3102D',
         'gray-450': '#718096',
+      },
+      backgroundImage: {
+        'specializedBackground': "linear-gradient(45deg, #e9ecef 25%, rgba(0, 0, 0, 0) 95%)",
       }
     },
   },

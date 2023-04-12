@@ -3,11 +3,12 @@ import {Center} from "panaverseRoot/app/components/Center";
 
 export default function Hero() {
   return (
-      <div className="relative h-screen flex justify-center items-center"
-           style={{
-             backgroundImage: "url(/heroBG.png)", backgroundPosition: "center",
-             backgroundRepeat: "no-repeat", backgroundSize: "contain"
-           }}>
+      <div className="relative h-screen flex justify-center items-center lg:bg-[url(/heroBG.png)] bg-no-repeat bg-contain bg-center"
+           // style={{
+           //   backgroundImage: "url(/heroBG.png)", backgroundPosition: "center",
+           //   backgroundRepeat: "no-repeat", backgroundSize: "contain"
+           // }}
+      >
         <div className="max-w-full">
           <Center className={'h-full'}>
             <div className="max-w-3xl md:max-w-65% lg:max-w-3xl mx-auto text-center py-20 md:py-36 gap-y-16 flex flex-col">
