@@ -53,13 +53,12 @@ function CourseDetailsComp({programQuarters}: { programQuarters: ProgramDetailTy
 const DetailCard = ({description}: { description: string }) => {
   const [show, setShow] = useState(false)
   const handleToggle = () => setShow(!show);
-  const {ref, overflow} = useOverflowDetector({onChange: undefined});
+  const {ref, overflow} = useOverflowDetector({});
 
   return (
     <div className={`md:flex-1 md:p-6 bg-transparent cursor-pointer md:min-w-[45%]`}>
       <div className="relative">
-        <div onClick={handleToggle} ref={ref}
-             className={`overflow-hidden text-justify leading-7 transition-max-h ease-in-out duration-700 ${show ? 'max-h-96' : 'md:max-h-28 lg:max-h-20'}`}>
+        <div onClick={handleToggle} ref={ref} className={`overflow-hidden text-justify leading-7 transition-max-h ease-in-out duration-700 ${show ? 'max-h-96' : 'md:max-h-28 lg:max-h-20'}`}>
           {description}
         </div>
       </div>
