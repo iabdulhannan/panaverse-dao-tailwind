@@ -1,4 +1,6 @@
 import './globals.css'
+import Header from "panaverseRoot/app/components/Header";
+import {Footer} from "panaverseRoot/app/components/Footer";
 
 export const metadata = {
   title: 'Create Next App',
@@ -6,13 +8,19 @@ export const metadata = {
 }
 
 export default function RootLayout({
-  children,
-}: {
+                                     children,
+                                   }: {
   children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+    <body>
+    <Header/>
+    <main className={`px-5 pt-16 scroll-mt-16 scroll-smooth`}>
+      {children}
+    </main>
+    <Footer/>
+    </body>
     </html>
   )
 }

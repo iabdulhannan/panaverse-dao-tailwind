@@ -25,7 +25,6 @@ export default function Header() {
       <header className={'bg-white px-5 fixed w-full z-50 top-0'}
               style={{boxShadow: '0 4px 6px rgba(160, 174, 192, 0.6)'}}>
         <div className={'container p-0 max-w-[calc(95vw)] mx-auto px-5'}>
-        {/*<div className={'container p-0 min-w-full'}>*/}
           <div className={'flex h-16 items-center justify-between mx-auto'}>
             <div className={'flex items-center justify-between min-w-full'}>
               <button onClick={() => setIsOpen(!isOpen)} className={'bg-transparent block md:hidden text-md ml-3'}
@@ -90,7 +89,8 @@ export default function Header() {
                                 {data.items.map((item, index: number) => {
                                   return (
                                     <>
-                                      <div className={`flex items-center mx-4 px-4 py-3 rounded-md border-b-gray-200 hover:border-b-panaverseRed ${index === data.items.length - 1 ? 'border-b-0' : 'border-b'}`}
+                                      <div
+                                        className={`flex items-center mx-4 px-4 py-3 rounded-md border-b-gray-200 hover:border-b-panaverseRed ${index === data.items.length - 1 ? 'border-b-0' : 'border-b'}`}
                                         key={index}>
                                         <Link href={item.linkTo} onClick={() => setIsOpen(false)}>
                                           <label className={'line-clamp-2 font-light hover:underline cursor-pointer'}>

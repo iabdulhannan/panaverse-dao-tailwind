@@ -33,7 +33,7 @@ const DropDownMenu = (props: DropdownData) => {
               leaveTo="opacity-0 translate-y-1"
             >
               <Popover.Panel
-                className="absolute z-10 mt-3 px-4 sm:px-0 max-w-[30%] ">
+                className="absolute z-20 mt-3 px-4 sm:px-0 max-w-[30%] bg-white">
                 {/*className="absolute left-1/2 z-10 mt-3 w-screen max-w-sm -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-3xl">*/}
                 <div className="overflow-hidden rounded-lg shadow-lg p-4">
                           {props?.items.map((data: any, index: number) => (
