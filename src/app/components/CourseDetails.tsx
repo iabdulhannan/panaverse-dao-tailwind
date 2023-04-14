@@ -13,7 +13,6 @@ function CourseDetailsComp({programQuarters}: { programQuarters: ProgramDetailTy
   const isDesktop = useBreakpoint(768, "any");
   const isMobile = useBreakpoint(0, 768);
 
-
   return (
     <>
       {programQuarters?.quarters.map((detail, index) => (
