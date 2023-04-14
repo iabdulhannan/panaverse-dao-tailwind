@@ -3,7 +3,7 @@ import React, {useState, useTransition} from 'react';
 
 function Collapse({children, className}: {
   children: React.ReactNode,
-  className: string
+  className?: string
 }) {
   const [show, setShow] = useState(false);
   const handleToggle = () => {
