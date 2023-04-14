@@ -9,8 +9,7 @@ type Props = {
 
 export async function generateMetadata(
   {params, searchParams}: Props,
-  parent?: ResolvingMetadata,
-): Promise<Metadata> {
+){
   // read route params
   const id = params.courseDetails;
   const program = await getCourseDetails(id)
