@@ -14,7 +14,7 @@ import {Disclosure, Transition} from "@headlessui/react";
 import Divider from "panaverseRoot/app/components/Divider";
 import {DropdownData} from "panaverseRoot/app/assets/types/types";
 
-const GITHUB_REPO_LINK = 'https://github.com/iabdulhannan/panaverse-dao-syllabus';
+const GITHUB_REPO_LINK = 'https://github.com/iabdulhannan/panaverse-dao-tailwind';
 
 export default function Header() {
   const router = useRouter();

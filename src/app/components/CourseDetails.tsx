@@ -57,7 +57,9 @@ const DetailCard = ({description}: { description: string }) => {
   return (
     <div className={`md:flex-1 md:p-6 bg-transparent cursor-pointer md:min-w-[45%]`}>
       <div className="relative">
-        <div onClick={handleToggle} ref={ref} className={`overflow-hidden text-justify leading-7 transition-max-h ease-in-out duration-700 ${show ? 'max-h-96' : 'md:max-h-28 lg:max-h-20'}`}>
+        {/*@ts-ignore*/}
+        <div onClick={handleToggle} ref={ref}
+             className={`overflow-hidden text-justify leading-7 transition-max-h ease-in-out duration-700 ${show ? 'max-h-96' : 'md:max-h-28 lg:max-h-20'}`}>
           {description}
         </div>
       </div>
